@@ -1,5 +1,5 @@
 # Set the base image
-FROM alpine:arm64
+FROM balenalib/raspberry-pi-alpine:3.11
 
 # Install required packages
 RUN apk -v --update add \
@@ -14,6 +14,8 @@ RUN apk -v --update add \
     bash \
     libc6-compat \
     gnupg \
+    musl-dev gcc \
+    build-base   \
     coreutils \        
     gzip \
     go \
