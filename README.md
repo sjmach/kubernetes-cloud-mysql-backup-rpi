@@ -1,8 +1,10 @@
-# kubernetes-cloud-mysql-backup
+# kubernetes-cloud-mysql-backup-rpi
 
-kubernetes-cloud-mysql-backup is a container image based on Alpine Linux. This container is designed to run in Kubernetes as a cronjob to perform automatic backups of MySQL databases to Amazon S3 or Google Cloud Storage. It was created to meet my requirements for regular and automatic database backups. Having started with a relatively basic feature set, it is gradually growing to add more and more features.
+This project is derived from the work done by Benjamin - [kubernetes-cloud-mysql-backup](https://github.com/benjamin-maynard/kubernetes-cloud-mysql-backup). The dockerfile has been modfied and tested to work on Raspberry Pi 4 devices. 
 
-Currently, kubernetes-cloud-mysql-backup supports the backing up of MySQL Databases. It can perform backups of multiple MySQL databases from a single database host. When triggered, a full database dump is performed using the `mysqldump` command for each configured database. The backup(s) are then uploaded to an Amazon S3 Bucket or a Google Cloud Storage Bucket. kubernetes-cloud-mysql-backup features Slack Integration, and can post messages into a channel detailing if the backup(s) were successful or not.
+kubernetes-cloud-mysql-backup-rpi is a container image based on raspberry-pi-alpine:3.11 image. This container is designed to run in Kubernetes as a cronjob to perform automatic backups of MySQL databases to Amazon S3 or Google Cloud Storage. It was created to meet my requirements for regular and automatic database backups. Having started with a relatively basic feature set, it is gradually growing to add more and more features.
+
+Currently, kubernetes-cloud-mysql-backup-rpi  supports the backing up of MySQL Databases. It can perform backups of multiple MySQL databases from a single database host. When triggered, a full database dump is performed using the `mysqldump` command for each configured database. The backup(s) are then uploaded to an Amazon S3 Bucket or a Google Cloud Storage Bucket. kubernetes-cloud-mysql-backup features Slack Integration, and can post messages into a channel detailing if the backup(s) were successful or not.
 
 Over time, kubernetes-cloud-mysql-backup will be updated to support more features and functionality.
 
