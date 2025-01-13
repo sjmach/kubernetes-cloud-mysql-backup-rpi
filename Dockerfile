@@ -1,5 +1,5 @@
 # Set the base image
-FROM balenalib/raspberry-pi-alpine:3.11
+FROM balenalib/raspberry-pi-alpine:latest
 
 # Install required packages
 RUN apk -v --update add \
